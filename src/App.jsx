@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar";
 import ThoughtBar from "./components/ThoughtBar";
 import Footer from "./components/footer";
 import AdminDashboard from "./components/administrator";
 import VoterDepartment from "./components/voterDepartment";
 import CandidateDepartment from "./components/CandidateDepartment";
 
-// Login Popup Component - Alag banao
+
 function LoginPopup({ showLoginPopup, loginRole, onClose, onLoginSubmit, loginData, updateLoginField, otpSent, handleOtpSend, loginError }) {
   if (!showLoginPopup) return null;
 
@@ -210,7 +210,7 @@ function Home() {
       {/* Main Content with Blur Effect */}
       <div className={`min-h-screen bg-black text-white flex flex-col ${showLoginPopup ? 'blur-sm' : ''}`}>
         {/* NAVBAR */}
-        <Navbar />
+        <navbar />
 
         {/* AQUA + TEAL GLOW */}
         <div
