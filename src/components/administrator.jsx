@@ -12,7 +12,8 @@ const AdminDashboard = () => {
     name: "Unknown",
     gender: "Male",
     phone: "9876543210",
-    photo: "/pics/Admin.jpg",
+    photo: `${import.meta.env.BASE_URL}pics/Admin.jpg`,
+
   });
 
   useEffect(() => {
@@ -33,8 +34,9 @@ const AdminDashboard = () => {
 
   const [activeForm, setActiveForm] = useState(null);
 
-  const defaultCandidateImage = "/pics/candidate.jpg";
-  const defaultVoterImage = "/pics/voter.jpg";
+const defaultCandidateImage = `${import.meta.env.BASE_URL}pics/candidate.jpg`;
+const defaultVoterImage = `${import.meta.env.BASE_URL}pics/voter.jpg`;
+
 
   const handleCandidateAdd = () => setActiveForm("candidate");
   const handleCandidateRemove = () => setActiveForm("removeCandidate");

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import ThoughtBar from "./components/ThoughtBar";
 import Footer from "./components/footer";
 import AdminDashboard from "./components/administrator";
@@ -210,7 +210,7 @@ function Home() {
       {/* Main Content with Blur Effect */}
       <div className={`min-h-screen bg-black text-white flex flex-col ${showLoginPopup ? 'blur-sm' : ''}`}>
         {/* NAVBAR */}
-        <navbar />
+        <Navbar />
 
         {/* AQUA + TEAL GLOW */}
         <div
@@ -226,14 +226,13 @@ function Home() {
               
               {/* Left Side - Ashoka Image */}
               <div className="flex-shrink-0 ml-7 mt-4">
-                <img 
-                  src="/pics/BlackAshoka.jpg" 
-                  alt="Ashoka" 
-                  className="w-80 h-[500px] object-contain rounded-lg shadow-2xl"
-                  style={{
-                    boxShadow: "0 10px 30px rgba(0,0,0,0.5)"
-                  }}
-                />
+              <img 
+  src={`${import.meta.env.BASE_URL}pics/BlackAshoka.jpg`}
+  alt="Ashoka" 
+  className="w-80 h-[500px] object-contain rounded-lg shadow-2xl"
+  style={{ boxShadow: "0 10px 30px rgba(0,0,0,0.5)" }}
+/>
+
               </div>
 
               {/* Middle - Text Content */}
@@ -262,14 +261,13 @@ function Home() {
 
               {/* Right Side - Ashoka Image (Same as Left) */}
               <div className="flex-shrink-0 mr-7 mt-4">
-                <img 
-                  src="/pics/BlackAshoka.jpg" 
-                  alt="Ashoka" 
-                  className="w-80 h-[500px] object-contain rounded-lg shadow-2xl"
-                  style={{
-                    boxShadow: "0 10px 30px rgba(0,0,0,0.5)"
-                  }}
-                />
+               <img 
+  src={`${import.meta.env.BASE_URL}pics/BlackAshoka.jpg`}
+  alt="Ashoka" 
+  className="w-80 h-[500px] object-contain rounded-lg shadow-2xl"
+  style={{ boxShadow: "0 10px 30px rgba(0,0,0,0.5)" }}
+/>
+
               </div>
 
             </div>
@@ -280,11 +278,14 @@ function Home() {
               {/* Administrator Box */}
               <div className="bg-gradient-to-br from-orange-500 to-orange-800 p-10 rounded-2xl shadow-2xl border border-black-900 flex-1 text-center min-h-[400px] flex flex-col">
                 <div className="flex justify-center mb-8 flex-1 items-center">
-                  <img 
-                    src="/pics/newofficer.jpg" 
-                    alt="Administrator"
-                    className="w-40 h-40 object-contain"
-                  />
+              <img
+  src={`${import.meta.env.BASE_URL}pics/newofficer.jpg`}
+  alt="Administrator"
+  className="w-40 h-40 object-contain"
+/>
+
+
+
                 </div>
                 <div className="flex flex-col justify-end">
                   <h3 className="text-3xl font-bold mb-4 text-black font-bold">Administrator</h3>
@@ -307,10 +308,11 @@ function Home() {
               <div className="bg-gradient-to-br from-gray-200 to-gray-400 p-10 rounded-2xl shadow-2xl border border-gray-700 hover:border-black-500 transition-all duration-300 flex-1 text-center min-h-[400px] flex flex-col">
                 <div className="flex justify-center mb-8 flex-1 items-center">
                   <img 
-                    src="/pics/newvoter.jpg" 
-                    alt="Voter" 
-                    className="w-40 h-40 object-contain"
-                  />
+  src={`${import.meta.env.BASE_URL}pics/newvoter.jpg`}
+  alt="Voter" 
+  className="w-40 h-40 object-contain"
+/>
+
                 </div>
                 <div className="flex flex-col justify-end">
                   <h3 className="text-3xl font-bold mb-4 text-black font-bold">Voter</h3>
@@ -332,11 +334,12 @@ function Home() {
               {/* Candidate Box */}
               <div className="bg-gradient-to-br from-green-500 to-green-900 p-10 rounded-2xl shadow-2xl border border-gray-700 hover:border-blue-500 transition-all duration-300 flex-1 text-center min-h-[400px] flex flex-col">
                 <div className="flex justify-center mb-8 flex-1 items-center">
-                  <img 
-                    src="/pics/newcandidate.jpg" 
-                    alt="Candidate"
-                    className="w-40 h-40 object-contain"
-                  />
+                <img 
+  src={`${import.meta.env.BASE_URL}pics/newcandidate.jpg`}
+  alt="Candidate"
+  className="w-40 h-40 object-contain"
+/>
+
                 </div>
                 <div className="flex flex-col justify-end">
                   <h3 className="text-3xl font-bold mb-4 text-black font-bold">Candidate</h3>

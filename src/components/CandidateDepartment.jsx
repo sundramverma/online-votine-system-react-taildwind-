@@ -8,9 +8,10 @@ const CandidateDepartment = () => {
   const [candidateProfile, setCandidateProfile] = useState({
     name: "Candidate Ka Naam",
     party: "Bharatiya Janata Party",
-    photo: "/pics/Admin.jpg",
-    partyLogo: "/pics/BJP.jpg",
+    photo: `${import.meta.env.BASE_URL}pics/Admin.jpg`,
+    partyLogo: `${import.meta.env.BASE_URL}pics/BJP.jpg`,
   });
+
 
   useEffect(() => {
     const savedProfile = JSON.parse(localStorage.getItem("candidateProfile"));
@@ -95,7 +96,8 @@ const CandidateDepartment = () => {
             left: "100px",
             right: "50px",
             bottom: "50px",
-            backgroundImage: "url('/pics/powerbi.jpg')",
+            backgroundImage: `url(${import.meta.env.BASE_URL}pics/powerbi.jpg)`,
+
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundSize: "80%",

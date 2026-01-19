@@ -9,7 +9,9 @@ function VoterDepartment() {
   const [showConfetti, setShowConfetti] = useState(false);
   const [voterProfile, setVoterProfile] = useState({
     name: "Voter",
-    photo: "/pics/Admin.jpg",
+  photo: `${import.meta.env.BASE_URL}pics/Admin.jpg`,
+
+
   });
 
   const [timeLeft, setTimeLeft] = useState(300);
@@ -35,13 +37,14 @@ function VoterDepartment() {
     return `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
   };
 
-  const candidates = [
-    { id: 1, name: "Bharatiya Janata Party", symbol: "/pics/BJP.jpg" },
-    { id: 2, name: "Indian National Congress", symbol: "/pics/CONG.jpg" },
-    { id: 3, name: "Bahujan Samaj Party", symbol: "/pics/BSP.jpg" },
-    { id: 4, name: "Samajwadi Party", symbol: "/pics/SP.jpg" },
-    { id: 5, name: "NOTA", symbol: "/pics/NOTA.jpg" },
-  ];
+ const candidates = [
+  { id: 1, name: "Bharatiya Janata Party", symbol: `${import.meta.env.BASE_URL}pics/BJP.jpg` },
+  { id: 2, name: "Indian National Congress", symbol: `${import.meta.env.BASE_URL}pics/CONG.jpg` },
+  { id: 3, name: "Bahujan Samaj Party", symbol: `${import.meta.env.BASE_URL}pics/BSP.jpg` },
+  { id: 4, name: "Samajwadi Party", symbol: `${import.meta.env.BASE_URL}pics/SP.jpg` },
+  { id: 5, name: "NOTA", symbol: `${import.meta.env.BASE_URL}pics/NOTA.jpg` },
+];
+
 
   const handleVote = (id) => {
     setSelectedCandidate(id);

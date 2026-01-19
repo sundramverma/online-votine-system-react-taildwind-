@@ -12,11 +12,12 @@ export default function Navbar() {
       style={{ height: "64px" }}
     >
       <div className="flex items-center">
-        <img
-          src="/pics/orglogo.jpg"
-          alt="Logo"
-          className="h-12 w-12 rounded-full object-contain"
-        />
+       <img
+  src={`${import.meta.env.BASE_URL}pics/orglogo.jpg`}
+  alt="Logo"
+  className="h-12 w-12 rounded-full object-contain"
+/>
+
       </div>
       
       <div className="text-xl font-bold tracking-wide">
@@ -24,11 +25,12 @@ export default function Navbar() {
       </div>
       
       <div className="flex items-center">
-        <img
-          src="/pics/orgele.jpg"
-          alt="Orgele"
-          className="h-16 w-12 object-contain"
-        />
+      <img
+  src={`${import.meta.env.BASE_URL}pics/orglogo.jpg`}
+  alt="Logo"
+  className="h-12 w-12 rounded-full object-contain"
+/>
+
       </div>
     </nav>
   );
